@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "target": "esnext",
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+        "module": "esnext",
+        "types": ["vite/client"],
+        "strict": true,
+        "erasableSyntaxOnly": true,
+        "allowJs": false,
+        "checkJs": false,
+
+        // Bundler mode
+        "moduleResolution": "bundler",
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "jsx": "react-jsx",
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+
+        // Packaging settings
+        "outDir": "dist",
+        "noEmit": true,
+        "declaration": false,
+
+        // Linting
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "exactOptionalPropertyTypes": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "noUncheckedSideEffectImports": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "useUnknownInCatchVariables": true,
+
+        // Optional
+        "skipLibCheck": true,
+
+        "paths": {
+            "~/*": ["./src/*"]
+        }
+    },
+    "include": ["src"]
+}

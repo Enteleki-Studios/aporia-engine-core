@@ -1,0 +1,95 @@
+{
+    "name": "typescript-template",
+    "version": "0.0.0",
+    "description": "A starter template for typescript projects",
+    "homepage": "https://github.com/mikeymaxdb/typescript-template#readme",
+    "bugs": {
+        "url": "https://github.com/mikeymaxdb/typescript-template/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mikeymaxdb/typescript-template.git"
+    },
+    "license": "MIT",
+    "author": "YOUR NAME HERE",
+    "private": true,
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "vite build",
+        "format": "prettier -l --write .",
+        "format:check": "prettier --check .",
+        "lint": "eslint .",
+        "prepare": "husky",
+        "start": "vite",
+        "test": "vitest",
+        "typecheck": "tsc --noEmit",
+        "typecheck:watch": "tsc --noEmit --watch"
+    },
+    "dependencies": {
+        "react": "^19.2.4",
+        "react-dom": "^19.2.4"
+    },
+    "devDependencies": {
+        "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
+        "@eslint-react/eslint-plugin": "^3.0.0",
+        "@eslint/js": "^9.39.4",
+        "@trivago/prettier-plugin-sort-imports": "^6.0.0",
+        "@types/node": "^24.12.0",
+        "@types/react": "^19.2.14",
+        "@types/react-dom": "^19.2.3",
+        "@vitejs/plugin-react": "^6.0.1",
+        "eslint": "^10.1.0",
+        "eslint-plugin-react-refresh": "^0.5.2",
+        "globals": "^17.4.0",
+        "husky": "^9.1.7",
+        "jsdom": "^29.0.1",
+        "lint-staged": "^16.2.7",
+        "prettier": "^3.8.1",
+        "typescript": "~5.9.3",
+        "typescript-eslint": "^8.57.2",
+        "vite": "^8.0.1",
+        "vitest": "^4.0.3"
+    },
+    "prettier": {
+        "printWidth": 90,
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "plugins": [
+            "@trivago/prettier-plugin-sort-imports"
+        ],
+        "importOrder": [
+            "<THIRD_PARTY_MODULES>",
+            "^[~/]",
+            "^[./]"
+        ],
+        "importOrderSeparation": true,
+        "importOrderSortSpecifiers": true,
+        "overrides": [
+            {
+                "files": "*.md",
+                "options": {
+                    "printWidth": 80,
+                    "proseWrap": "always"
+                }
+            }
+        ]
+    },
+    "lint-staged": {
+        "*": [
+            "prettier --write --ignore-unknown"
+        ],
+        "src/**/*": [
+            "eslint",
+            "vitest related --run"
+        ],
+        "*.{ts,tsx}": [
+            "bash -c 'npm run typecheck'"
+        ]
+    }
+}
