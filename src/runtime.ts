@@ -91,4 +91,16 @@ export class Runtime<W extends AnyWorld = AnyWorld> {
     get isRunning() {
         return Boolean(this.loopId)
     }
+
+    get numSystems() {
+        return this.systems.length
+    }
+
+    get numDebugSystems() {
+        return this.debugSystems.length
+    }
+
+    get numTasks() {
+        return this.tasks.length
+    }
 }
