@@ -12,7 +12,6 @@
     },
     "license": "MIT",
     "author": "Enteleki Studios",
-    "private": true,
     "type": "module",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
