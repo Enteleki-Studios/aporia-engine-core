@@ -64,6 +64,9 @@ export default defineConfig([
             '@typescript-eslint/unbound-method': 0,
 
             '@eslint-community/eslint-comments/require-description': 'error',
+
+            // Interferes with vitest type test
+            '@typescript-eslint/no-unnecessary-type-arguments': 0,
         },
     },
 ])

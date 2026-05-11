@@ -1,17 +1,17 @@
 {
-    "name": "typescript-template",
+    "name": "@enteleki-studios/aporia-engine-core",
     "version": "0.0.0",
-    "description": "A starter template for typescript projects",
-    "homepage": "https://github.com/mikeymaxdb/typescript-template#readme",
+    "description": "Core functionality of the Aporia game engine",
+    "homepage": "https://github.com/Enteleki-Studios/aporia-engine-core",
     "bugs": {
-        "url": "https://github.com/mikeymaxdb/typescript-template/issues"
+        "url": "https://github.com/Enteleki-Studios/aporia-engine-core/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/mikeymaxdb/typescript-template.git"
+        "url": "git+https://github.com/Enteleki-Studios/aporia-engine-core.git"
     },
     "license": "MIT",
-    "author": "YOUR NAME HERE",
+    "author": "Enteleki Studios",
     "private": true,
     "type": "module",
     "main": "./dist/index.js",
@@ -20,17 +20,17 @@
         "dist"
     ],
     "scripts": {
-        "build": "vite build",
+        "build": "tsc --build",
         "format": "prettier -l --write .",
         "format:check": "prettier --check .",
         "lint": "eslint .",
         "prepare": "husky",
-        "start": "vite",
         "test": "vitest",
-        "typecheck": "tsc --noEmit",
-        "typecheck:watch": "tsc --noEmit --watch"
+        "typecheck": "tsc --build --noEmit",
+        "typecheck:watch": "tsc --build --noEmit --watch"
     },
     "dependencies": {
+        "gl-matrix": "^3.4.4",
         "react": "^19.2.4",
         "react-dom": "^19.2.4"
     },
@@ -42,7 +42,6 @@
         "@types/node": "^24.12.0",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
-        "@vitejs/plugin-react": "^6.0.1",
         "eslint": "^10.1.0",
         "eslint-plugin-react-refresh": "^0.5.2",
         "globals": "^17.4.0",
@@ -50,9 +49,9 @@
         "jsdom": "^29.0.1",
         "lint-staged": "^16.2.7",
         "prettier": "^3.8.1",
+        "type-fest": "^5.5.0",
         "typescript": "~5.9.3",
         "typescript-eslint": "^8.57.2",
-        "vite": "^8.0.1",
         "vitest": "^4.0.3"
     },
     "prettier": {

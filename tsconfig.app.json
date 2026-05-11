@@ -4,7 +4,6 @@
         "target": "esnext",
         "lib": ["ESNext", "DOM", "DOM.Iterable"],
         "module": "esnext",
-        "types": ["vite/client"],
         "strict": true,
         "erasableSyntaxOnly": true,
         "allowJs": false,
@@ -22,8 +21,8 @@
 
         // Packaging settings
         "outDir": "dist",
-        "noEmit": true,
-        "declaration": false,
+        "noEmit": false,
+        "declaration": true,
 
         // Linting
         "allowUnreachableCode": false,
