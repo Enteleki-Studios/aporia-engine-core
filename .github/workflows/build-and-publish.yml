@@ -7,6 +7,10 @@ on:
         tags:
             - 'v*'
 
+permissions:
+    contents: read
+    id-token: write
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -48,6 +52,4 @@ jobs:
 
             - run: npm run build
 
-            # - run: npm publish --dry-run
-            #   env:
-            #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - run: npm publish --provenance
