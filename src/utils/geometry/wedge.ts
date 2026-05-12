@@ -1,4 +1,4 @@
-import type { Wedge } from '~/.'
+import type { Wedge } from '../..'
 
 export function generateWedgeMeshData({
     halfWidth: hx,

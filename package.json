@@ -15,11 +15,29 @@
     "type": "module",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./react": {
+            "types": "./dist/react/index.d.ts",
+            "default": "./dist/react/index.js"
+        },
+        "./components": {
+            "types": "./dist/components/index.d.ts",
+            "default": "./dist/components/index.js"
+        },
+        "./utils": {
+            "types": "./dist/utils/index.d.ts",
+            "default": "./dist/utils/index.js"
+        }
+    },
     "files": [
         "dist"
     ],
     "scripts": {
-        "build": "tsc --build",
+        "build": "tsc --build && tsc-alias -p tsconfig.app.json",
         "format": "prettier -l --write .",
         "format:check": "prettier --check .",
         "lint": "eslint .",
@@ -48,6 +66,7 @@
         "jsdom": "^29.0.1",
         "lint-staged": "^16.2.7",
         "prettier": "^3.8.1",
+        "tsc-alias": "^1.8.17",
         "type-fest": "^5.5.0",
         "typescript": "~5.9.3",
         "typescript-eslint": "^8.57.2",

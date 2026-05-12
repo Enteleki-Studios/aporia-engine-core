@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 
-import { average } from '~/utils'
+import { average } from '../utils'
 
 export const useSmoothNumber = (value: number, history = 10) => {
     const numbersRef = useRef<number[]>([])

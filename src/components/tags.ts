@@ -1,4 +1,4 @@
-import { createComponent } from '~/.'
+import { createComponent } from '..'
 
 export const PlayerComponent = createComponent('player')
 export const HeroComponent = createComponent('hero')

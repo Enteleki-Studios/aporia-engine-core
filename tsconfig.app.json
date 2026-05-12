@@ -42,11 +42,12 @@
         "useUnknownInCatchVariables": true,
 
         // Optional
-        "skipLibCheck": true,
-
-        "paths": {
-            "~/*": ["./src/*"]
-        }
+        "skipLibCheck": true
     },
-    "include": ["src"]
+    "include": ["src"],
+    // tsc emits import specifiers verbatim; the published dist runs under Node ESM,
+    // which needs explicit .js extensions. tsc-alias rewrites the emitted output.
+    "tsc-alias": {
+        "resolveFullPaths": true
+    }
 }

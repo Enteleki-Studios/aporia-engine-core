@@ -1,4 +1,4 @@
-import { type Array3, type Array4, type Shape3D, createComponent } from '~/.'
+import { type Array3, type Array4, type Shape3D, createComponent } from '..'
 
 type Transform3D = {
     position: Array3
